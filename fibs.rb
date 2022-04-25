@@ -7,7 +7,7 @@ def fibs(number)
         return "Your argument is not an integer"
     else
         if number == 0
-            return array[0]
+            return array[0..0]
         elsif number == 1
             return array[0..1] # this seems unnecessary but I intend to be explicit
         else
@@ -23,6 +23,8 @@ def fibs(number)
 end
 
 #------------------------------------------------------------------------------
+
+p fibs(8) # expected: [0, 1, 1, 2, 3, 5, 8, 13]
 
 20.times do |number|
     p fibs(number)
